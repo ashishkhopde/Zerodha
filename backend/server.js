@@ -5,6 +5,7 @@ import connectDB from "./config/connectDB.js";
 
 import holdingsRoutes from "./routes/holdingsRoutes.js";
 import positionsRoutes from "./routes/positionsRoutes.js";
+import ordersRoutes from "./routes/ordersRoutes.js";
 
 import { HoldingsModel } from "./models/holdingModel.js";
 import { PositionsModel } from "./models/positionModel.js";
@@ -18,6 +19,7 @@ app.use(cors());
 
 app.use("/api/holdings", holdingsRoutes);
 app.use("/api/positions", positionsRoutes);
+app.use("/api/orders", ordersRoutes);
 
 app.listen(process.env.PORT, () => {
     console.log(`Server is running on port ${process.env.PORT}`);
